@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:final_project/constans/appcolor.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -32,7 +33,7 @@ class HomeScreen extends StatelessWidget {
           _buildGridTile('KPIs',  "assets/Path 425.png"),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(backgroundColor:(AppColor.homeColor),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

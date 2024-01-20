@@ -90,10 +90,10 @@ class S {
     );
   }
 
-  /// `Sigin Up`
+  /// `Sign Up`
   String get SignUp {
     return Intl.message(
-      'Sigin Up',
+      'Sign Up',
       name: 'SignUp',
       desc: '',
       args: [],
@@ -509,6 +509,16 @@ class S {
     return Intl.message(
       'Add',
       name: 'Add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your Full Name here ...`
+  String get hint {
+    return Intl.message(
+      'Enter your Full Name here ...',
+      name: 'hint',
       desc: '',
       args: [],
     );

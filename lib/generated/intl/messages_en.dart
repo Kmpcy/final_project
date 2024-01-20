@@ -67,13 +67,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scientific Degree"),
         "SelectyourCity":
             MessageLookupByLibrary.simpleMessage("Select Your City"),
-        "SignUp": MessageLookupByLibrary.simpleMessage("Sigin Up"),
+        "SignUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "StaffRisk": MessageLookupByLibrary.simpleMessage("Staff Risk"),
         "UploadCertificates":
             MessageLookupByLibrary.simpleMessage("Upload Certificates"),
         "UploadLicense": MessageLookupByLibrary.simpleMessage("Upload License"),
         "WorkInfo": MessageLookupByLibrary.simpleMessage("Work Info"),
         "YourID": MessageLookupByLibrary.simpleMessage("Your ID"),
+        "hint": MessageLookupByLibrary.simpleMessage(
+            "Enter your Full Name here ..."),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "profile": MessageLookupByLibrary.simpleMessage("profile"),
         "selectyourspecialty":

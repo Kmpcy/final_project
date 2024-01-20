@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "UploadLicense": MessageLookupByLibrary.simpleMessage("ارفع الرخصة"),
         "WorkInfo": MessageLookupByLibrary.simpleMessage("معلومات مهنية"),
         "YourID": MessageLookupByLibrary.simpleMessage("هويتك"),
+        "hint":
+            MessageLookupByLibrary.simpleMessage(" ... اكتب اسمك بالكامل هنا "),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "profile": MessageLookupByLibrary.simpleMessage("الحساب"),
         "selectyourspecialty":

@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
 
 class CustomFormTextField extends StatelessWidget {
-  CustomFormTextField({this.obscure = false, this.hintText, this.onSubmitted});
+  CustomFormTextField(
+      {this.obscure = false, this.hintText, this.onSubmitted, this.validator});
   String? hintText;
   Function(String)? onSubmitted;
+  String? Function(String?)? validator;
   bool? obscure;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Container(  height:75,
       color: Colors.white,
       width: 260,
       child: TextFormField(
+          style: TextStyle(fontSize: 16, height: 2),
           obscureText: obscure!,
-          validator: (data) {
-            if (data!.isEmpty) {
-              return "Field is required";
-            }
-          },
+          validator: validator,
           onFieldSubmitted: onSubmitted,
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
+            hintStyle: TextStyle(color: Colors.grey, fontSize: 13),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.white),
             ),
@@ -30,7 +28,7 @@ class CustomFormTextField extends StatelessWidget {
             ),
           ),
           // تحديد الارتفاع هنا
-          style: TextStyle(height: 1,color: Colors.black)),
-    );
+         // style: TextStyle(height: 0, color: Colors.black)),
+     ) );
   }
 }

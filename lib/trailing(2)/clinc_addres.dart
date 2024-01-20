@@ -19,7 +19,11 @@ class ClincAddress extends StatelessWidget {
         Text(S.of(context).ClincAddress,
               style: TextStyle(
                   color: AppColor.greenColor, fontSize: 20)),
-                  Expanded(child: CustomFormTextField())
+                  Expanded(child: CustomFormTextField(validator: (data) {
+    if (data!.isEmpty) {
+    return "Field is required";
+    }
+    }, ))
                   ],));
   }
 }

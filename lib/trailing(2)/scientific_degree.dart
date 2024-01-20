@@ -1,11 +1,7 @@
-
-import 'package:flutter/material.dart';
 import 'package:final_project/constans/appcolor.dart';
-import 'package:final_project/widgets/custom_drop_draw.dart';
-
-
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:final_project/generated/l10n.dart';
+import 'package:final_project/widgets/custom_drop_draw.dart';
+import 'package:flutter/material.dart';
 
 class ScientificDegree extends StatelessWidget {
   const ScientificDegree({
@@ -15,16 +11,19 @@ class ScientificDegree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-             color: Colors.white,
-             child: Row(
-               children: [
-                 Text( S.of(context).ScientificDegree,
-                     style: TextStyle(
-                         color: AppColor.greenColor, fontSize: 20)),
-                 SizedBox(width: 44),
-                Expanded(child: MyDropdown2(listItems:[ "Select Your Specialtiy", "Speaciality2"]))
-               ],
-             ),
-           );
+      color: Colors.white,
+      child: Row(
+        children: [
+          Text(S.of(context).ScientificDegree,
+              style: TextStyle(color: AppColor.greenColor, fontSize: 20)),
+          SizedBox(width: 28),
+          Expanded(
+              child: MyDropdown1(
+            listItems: ['Select Your ScientificDegree', "ScientificDegree 2"],
+            selecteditem: 'Select Your ScientificDegree',
+          ))
+        ],
+      ),
+    );
   }
 }

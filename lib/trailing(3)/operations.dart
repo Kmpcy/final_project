@@ -15,7 +15,7 @@ class Operations extends StatelessWidget {
       color: Colors.white,
       child: Row(
         children: [
-          Text( S.of(context).Pleaseaddmedicationsifany,
+          Text( S.of(context).Pleaseaddpreviousopreationsifany,
               style:
                   TextStyle(fontSize: 18, color: Colors.black)),
           Padding(

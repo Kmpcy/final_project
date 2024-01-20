@@ -19,7 +19,14 @@ class ClincName extends StatelessWidget {
         Text(S.of(context).Clincname ,
               style: TextStyle(
                   color: AppColor.greenColor, fontSize: 20)),
-                  CustomFormTextField()
+                  CustomFormTextField(validator: (data) {
+    if (data!.isEmpty) {
+    return "Field is required";
+    }
+    if (!data.contains(RegExp(r'^[a-zA-Z]+$'))){
+ return "Please wrtie clinc name ";
+    }
+    }, )
                   ],));
   }
 }

@@ -3,7 +3,7 @@
     "language":"Language",
     "PersonalInfo":"Personal Info",
     "WorkInfo":"Work Info",
-    "SignUp":"Sigin Up",
+    "SignUp":"Sign Up",
     "FullName":"Full Name",
     "YourID": "Your ID",
     "Passport": "Passport",
@@ -46,6 +46,6 @@
     "Back":"Back",
     "profile":"profile",
     "DarkMode":"Dark Mode",
-    "Add":"Add"
-
+    "Add":"Add",
+"hint":"Enter your Full Name here ..."
 }
