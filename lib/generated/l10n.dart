@@ -300,7 +300,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'selectyourScientificDegree ' key
+  /// `select your Scientific Degree`
+  String get selectyourScientificDegree {
+    return Intl.message(
+      'select your Scientific Degree',
+      name: 'selectyourScientificDegree',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Clinc name`
   String get Clincname {
@@ -464,10 +472,10 @@ class S {
     );
   }
 
-  /// `settings`
+  /// `Settings`
   String get settings {
     return Intl.message(
-      'settings',
+      'Settings',
       name: 'settings',
       desc: '',
       args: [],
@@ -484,10 +492,10 @@ class S {
     );
   }
 
-  /// `profile`
+  /// `Profile`
   String get profile {
     return Intl.message(
-      'profile',
+      'Profile',
       name: 'profile',
       desc: '',
       args: [],

@@ -77,12 +77,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint": MessageLookupByLibrary.simpleMessage(
             "Enter your Full Name here ..."),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
-        "profile": MessageLookupByLibrary.simpleMessage("profile"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "selectyourScientificDegree": MessageLookupByLibrary.simpleMessage(
+            "select your Scientific Degree"),
         "selectyourspecialty":
             MessageLookupByLibrary.simpleMessage("select your specialty"),
         "selectyoursubspecialty":
             MessageLookupByLibrary.simpleMessage("select your sub specialty"),
-        "settings": MessageLookupByLibrary.simpleMessage("settings"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "subspecialty": MessageLookupByLibrary.simpleMessage("sub specialty")
       };
 }

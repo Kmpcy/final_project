@@ -27,7 +27,7 @@
         "selectyoursubspecialty":"اختر تخصصك الفرعى",
         "Pleaseaddmedicationsifany":"من فضلك اضف ادويتك ان وجدت",
         "ScientificDegree":"الدرجة العلمية",
-        "selectyourScientificDegree ":"اختر درجتك العلمية",
+        "selectyourScientificDegree":"اختر درجتك العلمية",
         "Clincname":"اسم العيادة",
         "ClincAddress":"عنوان العيادة",
         "UploadCertificates":"ارفع الشهادات",
@@ -46,10 +46,15 @@
         "settings":"الاعدادات",
         "Back":"رجوع",
         "profile":"الحساب",
-        "Dar Mode":"الوضع المظلم",
+        "DarkMode":"الوضع المظلم",
         "Add":"أضافة",
         "MedicalInfo":"معلومات طبية",
-        "hint":" ... اكتب اسمك بالكامل هنا "
+        "hint":" ... اكتب اسمك بالكامل هنا ",
+        "Setting":"الاعد",
+"Language":"Language",
+
+"Profile":"Profile"
+
     
    
 }

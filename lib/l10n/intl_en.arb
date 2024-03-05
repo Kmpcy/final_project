@@ -24,7 +24,7 @@
     "subspecialty":"sub specialty",
     "selectyoursubspecialty":"select your sub specialty",
     "ScientificDegree":"Scientific Degree",
-    "selectyourScientificDegree ":"select your Scientific Degree",
+    "selectyourScientificDegree":"select your Scientific Degree",
     "Clincname":"Clinc name",
     "ClincAddress":"Clinc Address",
     "ClincNumber":"Clinc Number",
@@ -42,10 +42,13 @@
     "StaffRisk":"Staff Risk",
     "PCR&ICRA":"PCR & ICRA",
     "ClinicalRisks":"Clinical Risks",
-    "settings":"settings",
+    "settings":"Settings",
     "Back":"Back",
-    "profile":"profile",
+    "profile":"Profile",
     "DarkMode":"Dark Mode",
     "Add":"Add",
 "hint":"Enter your Full Name here ..."
+
+
+ 
 }

@@ -26,7 +26,7 @@ class _Condition_byVoiceState extends State<Condition_byVoice> {
   late Record audioRecord;
   bool isRecording = false;
   String audioPath = "";
-  File? file;
+  File? audioFile;
   void initState() {
     audioRecord = Record();
     super.initState();
@@ -59,9 +59,9 @@ class _Condition_byVoiceState extends State<Condition_byVoice> {
     isRecording = false;
     audioPath = path!;
           
-file = File(audioPath);
+audioFile = File(audioPath);
                 final storageRef = FirebaseStorage.instance.ref("audio/$audioPath");
-                 storageRef.putFile(file!);
+                 storageRef.putFile(audioFile!);
   });
 } on Exception catch (e) {
     print("Error in stop rec $e");

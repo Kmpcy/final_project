@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ClinicalRisks": MessageLookupByLibrary.simpleMessage("Clinical Risks"),
         "ConfirmPassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة السر"),
+        "DarkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
         "Dashboard": MessageLookupByLibrary.simpleMessage("شاشة التحكم"),
         "DateofBirth": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "Describeyourconditionbyvideo":
@@ -74,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" ... اكتب اسمك بالكامل هنا "),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "profile": MessageLookupByLibrary.simpleMessage("الحساب"),
+        "selectyourScientificDegree":
+            MessageLookupByLibrary.simpleMessage("اختر درجتك العلمية"),
         "selectyourspecialty":
             MessageLookupByLibrary.simpleMessage("اختر حالتك الخاصة"),
         "selectyoursubspecialty":
