@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:final_project/constans/appcolor.dart';
-
-
-
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:final_project/generated/l10n.dart';
+import 'package:flutter/material.dart';
 
 class Medications extends StatelessWidget {
   const Medications({
@@ -17,18 +13,15 @@ class Medications extends StatelessWidget {
       color: Colors.white,
       child: Row(
         children: [
-          Text( S.of(context).Pleaseaddmedicationsifany,
-              style:
-                  TextStyle(fontSize: 18, color: Colors.black)),
-          Padding(
-            padding: const EdgeInsets.only(left: 85),
-            child: IconButton(color:AppColor.greenColor,
-                onPressed: () {},
-                icon: Icon(Icons.add_circle_outline)),
-          ),
+          Text(S.of(context).Pleaseaddmedicationsifany,
+              style: const TextStyle(fontSize: 18, color: Colors.black)),
+          const Spacer(),
+          IconButton(
+              color: AppColor.greenColor,
+              onPressed: () {},
+              icon: const Icon(Icons.add_circle_outline)),
         ],
       ),
     );
   }
 }
- 

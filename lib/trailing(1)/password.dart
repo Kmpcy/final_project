@@ -1,11 +1,9 @@
-
-import 'package:flutter/material.dart';
 import 'package:final_project/constans/appcolor.dart';
-import 'package:final_project/widgets/custom_text_field.dart';
-
-
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:final_project/generated/l10n.dart';
+import 'package:final_project/widgets/custom_text_field.dart';
+import 'package:flutter/material.dart';
+
+TextEditingController passwordController = TextEditingController();
 
 class password extends StatelessWidget {
   const password({
@@ -14,13 +12,19 @@ class password extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(color:Colors.white,
-                  child: Row(children: [
-                    Text(S.of(context).Password,
-                          style: TextStyle(
-    color: AppColor.greenColor, fontSize: 20)),
-    Expanded(child: CustomFormTextField(obscure: true,validator:
-    (value) {
+    return Container(
+      color: Colors.white,
+      child: Row(
+        children: [
+          Text(
+            S.of(context).Password,
+            style: const TextStyle(color: AppColor.greenColor, fontSize: 20),
+          ),
+          Expanded(
+            child: CustomFormTextField(
+              controller: passwordController,
+              obscure: true,
+              validator: (value) {
                 // Implement password validation rules
                 if (value == null || value.isEmpty) {
                   return 'Please enter a password';
@@ -29,8 +33,10 @@ class password extends StatelessWidget {
                 }
                 return null; // Return null for valid input
               },
-            
-     ))
-    ],));
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
