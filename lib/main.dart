@@ -2,7 +2,6 @@ import 'package:final_project/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:final_project/views/sign_up.dart';
-
 import 'package:sizer/sizer.dart';
 import 'package:final_project/views/HomeScreen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -67,6 +66,7 @@ class MyAppState extends State<MyApp> {
 
             debugShowCheckedModeBanner: false,
             home: SignUpPage(),
+            // Setting()
           ),
         );
       },

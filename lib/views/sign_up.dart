@@ -23,16 +23,12 @@ bool language = false;
 bool isExpanded = true;
 String? gender;
 String countryValue = "";
-
 late String? stateValue;
-
 late String? cityValue;
 String? videoUrl;
 File? file;
-
 String address = "";
 TextEditingController phoneNumberController = TextEditingController();
-
 late Record audioRecord;
 bool isRecording = false;
 String audioPath = "";
@@ -40,6 +36,10 @@ File? audioFile;
 final _formKey = GlobalKey<FormState>();
   late String _password ="";
   late String _confirmPassword="";
+
+
+
+
 class SignUpPage extends StatefulWidget {
   SignUpPage({Key? key}) : super(key: key);
 
@@ -66,7 +66,7 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Scaffold(
       body: Form(
         key: formKey,
-        child: ListView(
+        child: ListView(shrinkWrap: false,
           children: [
             Row(children: [
               SizedBox(
@@ -810,7 +810,8 @@ class _SignUpPageState extends State<SignUpPage> {
                                   width: 70,
                                   height: 40,
                                   child: ElevatedButton.icon(
-                                      onPressed: isRecording
+                                      onPressed: 
+                                      isRecording
                                           ? stopRecording
                                           : startRecording,
                                       icon: Icon(Icons.mic, size: 17),
