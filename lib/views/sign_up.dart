@@ -18,7 +18,6 @@ import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:record/record.dart';
 import 'package:sizer/sizer.dart';
-
 bool language = false;
 bool isExpanded = true;
 String? gender;

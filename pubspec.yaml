@@ -43,13 +43,13 @@ dependencies:
   csc_picker: ^0.2.7
   intl_phone_field: ^3.2.0
   sizer: ^2.0.15
-  firebase_core: ^2.27.1
+  firebase_core: ^2.29.0
   
   
 
   record: ^4.0.4
-  fluttertoast: ^8.0.8
-  firebase_storage: ^11.6.10
+  fluttertoast: ^8.2.2
+  firebase_storage: ^11.7.1
   image_picker: ^1.0.7
   flutter_datetime_picker_plus: ^2.1.0
   adaptive_theme: ^3.6.0
@@ -75,8 +75,19 @@ dev_dependencies:
 flutter_native_splash:
   color: "#FFFFFF"
   image: assets/doctor.png
+  android: true
+  ios: true
   android_gravity: center
   fullscreen: true
+  android_12:
+    image: assets/doctor.png
+    icon_background_color: "#FFFFFF"
+
+
+  
+
+   
+
 
 
 
