@@ -1,15 +1,19 @@
-import 'package:final_project/firebase_serviec/storage_img.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:final_project/constans/appcolor.dart';
+import 'package:final_project/firebase_serviec/storage_img.dart';
+import 'package:flutter/material.dart';
 
 class MyDropdown2 extends StatefulWidget {
   List<String> listItems = [];
   String selecteditem;
-  MyDropdown2({required this.selecteditem, required this.listItems, super.key});
+  final String image;
+  MyDropdown2(
+      {required this.selecteditem,
+      required this.listItems,
+      required this.image,
+      super.key});
 
   @override
-  _MyDropdown2State createState() => _MyDropdown2State();
+  State<MyDropdown2> createState() => _MyDropdown2State();
 }
 
 class _MyDropdown2State extends State<MyDropdown2> {
@@ -17,16 +21,31 @@ class _MyDropdown2State extends State<MyDropdown2> {
   Widget build(BuildContext context) {
     return DropdownButton<String>(
       value: widget.selecteditem,
-      icon: Icon(Icons.arrow_downward), // Arrow-down icon
+      icon: const Icon(Icons.arrow_downward), // Arrow-down icon
       iconSize: 24,
       elevation: 16,
-      style: TextStyle(color: AppColor.greenColor),
-      onChanged:  (newValue)  {
-        setState(()     {widget.selecteditem = newValue!;
-          if (widget.selecteditem == 'Upload Images')      {
-                       Storage().uploadImages();
-          } else{
-                 Storage().takeImages();
+      style: const TextStyle(color: AppColor.greenColor),
+      onChanged: (newValue) {
+        setState(() {
+          widget.selecteditem = newValue!;
+          if (widget.selecteditem == 'Upload Images') {
+            if (widget.image == 'image') {
+              Storage().uploadImages('image');
+            } else if (widget.image == 'image1') {
+              Storage().uploadImages('image1');
+            } else if (widget.image == 'image2') {
+              Storage().uploadImages('image2');
+            }
+          } else if (widget.selecteditem == 'Take Images') {
+            if (widget.image == 'image') {
+              Storage().takeImages('image');
+            } else if (widget.image == 'image1') {
+              Storage().takeImages('image1');
+            } else if (widget.image == 'image2') {
+              Storage().takeImages('image2');
+            }
+          } else {
+            Storage.removeImage('image');
           }
         });
       },

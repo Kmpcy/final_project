@@ -1,12 +1,9 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:final_project/generated/l10n.dart';
-import 'package:final_project/main.dart';
-import 'package:final_project/trailing(1)/password_confirm.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class Setting extends StatefulWidget {
-  Setting({Key? key}) : super(key: key);
+  const Setting({super.key});
 
   @override
   State<Setting> createState() => SettingState();
@@ -21,16 +18,14 @@ class SettingState extends State<Setting> {
       appBar: AppBar(
         toolbarHeight: 100,
         backgroundColor: const Color(0xff055548),
-                automaticallyImplyLeading: false, 
-
+        automaticallyImplyLeading: false,
         flexibleSpace: Center(
           child: Row(
             children: [
               IconButton(
                 onPressed: () {
-                   setState(() {});
-
-                              Navigator.pop(context, '/home');
+                  setState(() {});
+                  Navigator.pop(context, '/home');
                 },
                 icon: const Icon(
                   Icons.arrow_back_ios_new,
@@ -39,14 +34,14 @@ class SettingState extends State<Setting> {
               ),
               Text(
                 S.of(context).Back,
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: const TextStyle(color: Colors.white, fontSize: 20),
               ),
             ],
           ),
         ),
         title: Text(
           S.of(context).settings,
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: const TextStyle(color: Colors.white, fontSize: 20),
         ),
         centerTitle: true,
         shape: const RoundedRectangleBorder(
@@ -63,40 +58,37 @@ class SettingState extends State<Setting> {
               children: [
                 Text(
                   S.of(context).DarkMode,
-                  style: TextStyle(fontSize: 25),
+                  style: const TextStyle(fontSize: 25),
                 ),
-     const Spacer(),
+                const Spacer(),
                 Switch(
                   value: switchValue,
                   onChanged: (value) {
                     setState(() {
-                      
                       switchValue = value;
-                    AdaptiveTheme.of(context).toggleThemeMode();
+                      AdaptiveTheme.of(context).toggleThemeMode();
                     });
-                   
-                 
                   },
                 ),
               ],
             ),
           ),
-       
+
           Row(
             children: [
               Text(
                 S.of(context).language,
-                style: TextStyle(fontSize: 25),
+                style: const TextStyle(fontSize: 25),
               ),
               const Spacer(),
               Column(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 200,
                     child: TextButton(
                       onPressed: () {
                         setState(() {
-                          S.load(Locale('en', 'EN'));
+                          S.load(const Locale('en', 'EN'));
                         });
                       },
                       style: TextButton.styleFrom(
@@ -106,7 +98,7 @@ class SettingState extends State<Setting> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        side: BorderSide(color: Colors.black87),
+                        side: const BorderSide(color: Colors.black87),
                         backgroundColor: Colors.white,
                       ),
                       child: const Text(
@@ -117,12 +109,12 @@ class SettingState extends State<Setting> {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 200,
                     child: TextButton(
                       onPressed: () {
                         setState(() {
-                          S.load(Locale('ar', 'AR'));
+                          S.load(const Locale('ar', 'AR'));
                         });
                       },
                       style: TextButton.styleFrom(
@@ -154,16 +146,17 @@ class SettingState extends State<Setting> {
               color: const Color(0xff055548),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.person,
                     color: Colors.white,
                   ),
                   Text(
                     S.of(context).profile,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
-                  Spacer(),
-                  Icon(Icons.arrow_forward_ios_rounded, color: Colors.white),
+                  const Spacer(),
+                  const Icon(Icons.arrow_forward_ios_rounded,
+                      color: Colors.white),
                 ],
               ),
               onPressed: () {},

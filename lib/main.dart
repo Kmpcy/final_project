@@ -1,20 +1,22 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:final_project/firebase_options.dart';
+import 'package:final_project/views/HomeScreen.dart';
+import 'package:final_project/views/Setting.dart';
+import 'package:final_project/views/sign_up.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:final_project/views/sign_up.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:sizer/sizer.dart';
-import 'package:final_project/views/HomeScreen.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'generated/l10n.dart';
-import 'package:final_project/views/Setting.dart';
-import 'package:adaptive_theme/adaptive_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  await GetStorage.init();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -25,8 +27,6 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
- 
-
   // void initState() {
   //   super.initState();
   //   _locale = Locale('en');
@@ -37,35 +37,39 @@ class MyAppState extends State<MyApp> {
   //   super.dispose();
   // }
 
-
+  @override
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return AdaptiveTheme(
-          light: ThemeData.light(useMaterial3: true),
-          dark: ThemeData.dark(useMaterial3: true),
-          // <------ add this line
-
+          light: ThemeData(
+            primarySwatch: Colors.blue,
+            iconTheme: const IconThemeData(color: Colors.black),
+            brightness: Brightness.light,
+            useMaterial3: true,
+          ),
+          dark: ThemeData(
+            useMaterial3: true,
+            primarySwatch: Colors.blue,
+            iconTheme: const IconThemeData(color: Colors.white),
+            brightness: Brightness.dark,
+          ),
           initial: AdaptiveThemeMode.light,
           builder: (theme, darkTheme) => MaterialApp(
             theme: theme,
             darkTheme: darkTheme,
             routes: {
-              '/home': (context) => HomeScreen(),
-              '/setting': (context) => Setting(),
+              '/home': (context) => const HomeScreen(),
+              '/setting': (context) => const Setting(),
               // other routes
             },
-            locale:Locale("en") ,
-            localizationsDelegates: [
+            localizationsDelegates: const [
               S.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
             ],
-             supportedLocales: S.delegate.supportedLocales,
+            supportedLocales: S.delegate.supportedLocales,
 
             debugShowCheckedModeBanner: false,
-            home: SignUpPage(),
+            home: const SignUpPage(),
             // Setting()
           ),
         );
@@ -226,7 +230,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   const Spacer(),
                   Column(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 200,
                         child: TextButton(
                           onPressed: () {},
@@ -249,7 +253,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                       // SizedBox(height: 0,),
-                      Container(
+                      SizedBox(
                         width: 200,
                         child: TextButton(
                           onPressed: () {},
@@ -333,45 +337,46 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Padding(
             padding: const EdgeInsets.only(top: 20),
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-                    children: [
-                      IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.home,
-                            color: Colors.white,
-                            size: 30,
-                          )),
-                      const Text(
-                        "Home",
-                        style: TextStyle(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.home,
                           color: Colors.white,
-                          fontSize: 15,
-                        ),
+                          size: 30,
+                        )),
+                    const Text(
+                      "Home",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
                       ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.settings,
-                            color: Colors.white,
-                            size: 30,
-                          )),
-                      const Text(
-                        "Settings",
-                        style: TextStyle(
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.settings,
                           color: Colors.white,
-                          fontSize: 15,
-                        ),
+                          size: 30,
+                        )),
+                    const Text(
+                      "Settings",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
                       ),
-                    ],
-                  ),
-                ]),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
