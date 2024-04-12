@@ -67,10 +67,9 @@ class MyAppState extends State<MyApp> {
               S.delegate,
             ],
             supportedLocales: S.delegate.supportedLocales,
-
             debugShowCheckedModeBanner: false,
-            home: const SignUpPage(),
             // Setting()
+            home: const SignUpPage(),
           ),
         );
       },
@@ -164,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   const Padding(
                     padding:
-                        EdgeInsets.symmetric(vertical: 150, horizontal: 30),
+                    EdgeInsets.symmetric(vertical: 150, horizontal: 30),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -325,60 +324,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(diagnosesController.text),
           ],
         ),
-        bottomSheet: Container(
-          height: 100,
-          decoration: const BoxDecoration(
-            color: Color(0xff055548),
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20.0),
-              topRight: Radius.circular(20.0),
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  children: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.home,
-                          color: Colors.white,
-                          size: 30,
-                        )),
-                    const Text(
-                      "Home",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.settings,
-                          color: Colors.white,
-                          size: 30,
-                        )),
-                    const Text(
-                      "Settings",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
+
       ),
     );
   }

@@ -20,7 +20,9 @@ import 'package:get_storage/get_storage.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:record/record.dart';
 import 'package:sizer/sizer.dart';
+bool isTextFieldVisible = false;
 
+TextEditingController diagnosesController = TextEditingController();
 bool language = false;
 bool isExpanded = true;
 String? videoUrl;
@@ -910,19 +912,41 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           Container(
                             color: Colors.white,
-                            child: Row(
+                            child: Column(
                               children: [
-                                Text(S.of(context).Pleaseaddmedicationsifany,
-                                    style: const TextStyle(
-                                        fontSize: 18, color: Colors.black)),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 77),
-                                  child: IconButton(
-                                      color: AppColor.greenColor,
-                                      onPressed: () {},
-                                      icon:
-                                          const Icon(Icons.add_circle_outline)),
+                                Row(
+                                  children: [
+                                    Text(S.of(context).Pleaseaddmedicationsifany,
+                                        style: const TextStyle(
+                                            fontSize: 18, color: Colors.black)),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 77),
+                                      child: IconButton(
+                                          color: AppColor.greenColor, onPressed: () {
+                                    setState(() {
+                                    isTextFieldVisible = !isTextFieldVisible;
+                                    });
+                                    },
+                                          icon:
+                                              const Icon(Icons.add_circle_outline)),
+                                    ),
+
+                                  ],
                                 ),
+
+                                if (isTextFieldVisible)
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: TextField(
+                                      controller: diagnosesController,
+                                      decoration: const InputDecoration(
+                                        labelText: 'Enter Text',
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ),
+                                  ),
+                                const Text("ال Show table   "),
+                                Text(diagnosesController.text),
                               ],
                             ),
                           ),
